@@ -2,7 +2,7 @@ const caixa1= document.getElementById('caixa1')// caixa 2
 const caixa2= document.getElementById('caixa2')//caix 1
 const btn = document.querySelector('#btn_copiar')//botão 
 const TodosOsCursos = [...document.querySelectorAll('.curso')]
-const btnvoltar = document.querySelector('#btn_voltar')
+
 
 
 
@@ -24,14 +24,10 @@ btn.addEventListener('click',()=>{
         
     })
 
-})
-
-btnvoltar.addEventListener('click',()=>{
-    const cursoscx2 = [...document.querySelectorAll('.selecionado')]
+    const cursonaoselecionado =[...document.querySelectorAll('.curso:not(.selecionado)')]
     
-    cursoscx2.map((el)=>{
+    cursonaoselecionado.map((el)=>{
         caixa1.appendChild(el)
-
-
     })
 })
+
